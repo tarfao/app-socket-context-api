@@ -16,6 +16,7 @@ let users=[]; //conjunto de usuarios que estao conectados ah pagina
 
 io.on("connection", (socket) => {
   console.log('conexao') //informa que alguem acessou
+  socket.emit('apelido_msg', 'Olá apelido que recebe msg exclusiva!');/**envia msg para o usuario que digitar o apelido='apelido_msg' */
   /**obtem os dados do cliente que acessou, para armazenar os seus dados, neste caso apenas apelido */
   socket.on("login", apelido => {
     if(!(apelido in users)){
