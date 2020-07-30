@@ -8,7 +8,7 @@ export default props => {
     const history = useHistory();
     let socket;
     const { apelido } = props;
-    const teste = useContext(MyContext);
+    const teste = useContext(MyContext); /**a partir daqui tenho acesso ao que me eh fornecido pelo no context_api */
     useEffect(() => {
         if (!props.load) {
             history.push('/');
